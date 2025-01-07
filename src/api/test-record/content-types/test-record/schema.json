@@ -1,0 +1,42 @@
+{
+  "kind": "collectionType",
+  "collectionName": "test_records",
+  "info": {
+    "singularName": "test-record",
+    "pluralName": "test-records",
+    "displayName": "Test Record"
+  },
+  "options": {
+    "draftAndPublish": false
+  },
+  "attributes": {
+    "student": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "api::student.student"
+    },
+    "class": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "api::class.class"
+    },
+    "test": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "api::test.test"
+    },
+    "startedAt": {
+      "type": "datetime"
+    },
+    "finishedAt": {
+      "type": "datetime"
+    },
+    "submitStatus": {
+      "type": "enumeration",
+      "enum": ["submitted", "waitForSubmit", "notSubmitted"]
+    },
+    "readingLevel": {
+      "type": "decimal"
+    }
+  }
+}

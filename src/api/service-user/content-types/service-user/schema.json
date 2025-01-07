@@ -1,0 +1,32 @@
+{
+  "kind": "collectionType",
+  "collectionName": "service_users",
+  "info": {
+    "singularName": "service-user",
+    "pluralName": "service-users",
+    "displayName": "Service User",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "name": {
+      "type": "string"
+    },
+    "userId": {
+      "type": "uid"
+    },
+    "engName": {
+      "type": "string"
+    },
+    "type": {
+      "type": "enumeration",
+      "enum": ["teacher", "student"]
+    },
+    "password": {
+      "type": "password"
+    }
+  }
+}

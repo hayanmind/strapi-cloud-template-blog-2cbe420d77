@@ -1,0 +1,77 @@
+{
+  "kind": "collectionType",
+  "collectionName": "students",
+  "info": {
+    "singularName": "student",
+    "pluralName": "students",
+    "displayName": "Student"
+  },
+  "options": {
+    "draftAndPublish": false
+  },
+  "attributes": {
+    "studentId": {
+      "type": "string",
+      "unique": true,
+      "required": true
+    },
+    "name": {
+      "type": "string",
+      "required": true
+    },
+    "engName": {
+      "type": "string"
+    },
+    "readingLevel": {
+      "type": "decimal"
+    },
+    "grade": {
+      "type": "enumeration",
+      "enum": [
+        "kindergarten",
+        "elementary_1",
+        "elementary_2",
+        "elementary_3",
+        "elementary_4",
+        "elementary_5",
+        "middle_1",
+        "middle_2",
+        "middle_3",
+        "high_1",
+        "high_2",
+        "high_3"
+      ]
+    },
+    "class": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "api::class.class"
+    },
+    "password": {
+      "type": "password"
+    },
+    "studentStatus": {
+      "type": "enumeration",
+      "enum": ["inUse", "notInUse", "notRegistered"],
+      "default": "inUse",
+      "required": true
+    },
+    "readingLevelUpdated": {
+      "type": "datetime"
+    },
+    "createdAt": {
+      "type": "datetime",
+      "required": true,
+      "configurable": false,
+      "visible": true,
+      "immutable": true
+    },
+    "updatedAt": {
+      "type": "datetime",
+      "required": true,
+      "configurable": false,
+      "visible": true,
+      "immutable": true
+    }
+  }
+}
