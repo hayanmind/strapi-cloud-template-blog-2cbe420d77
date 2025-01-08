@@ -1,4 +1,3 @@
-// src/admin/app.js
 import React from "react";
 import { User } from "@strapi/icons";
 
